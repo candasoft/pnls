@@ -1,0 +1,240 @@
+:root {
+  --cream: #f6f0e7;
+}
+html {
+  scroll-padding-top: 110px;
+}
+body {
+  overflow-wrap: break-word;
+}
+:focus-visible {
+  outline: 3px solid #b58d46;
+  outline-offset: 5px;
+}
+.nav :focus-visible,
+.hero :focus-visible,
+.showcase :focus-visible,
+.footer :focus-visible,
+.cta :focus-visible {
+  outline-color: #f6d48e;
+}
+.skip:focus {
+  position: fixed;
+  color: var(--navy);
+  border-radius: 4px;
+}
+.countdown {
+  display: flex;
+  gap: 22px;
+  margin-top: 28px;
+  min-height: 61px;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+.countdown div {
+  min-width: 52px;
+  display: flex;
+  flex-direction: column;
+}
+.countdown b {
+  font:
+    600 1.65rem "Outfit",
+    sans-serif;
+  line-height: 1.2;
+  color: #f6d48e;
+}
+.countdown span {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #c6d0e4;
+  margin-top: 6px;
+}
+.countdown-loading {
+  font-size: 0.8rem;
+  align-items: center;
+  color: #c6d0e4;
+}
+.hero-mini {
+  margin-top: 24px;
+}
+.event-status {
+  margin-top: 25px;
+  color: #f6d48e !important;
+}
+.intro-image img,
+.showcase img {
+  width: 100%;
+  height: auto;
+}
+.notice-dialog {
+  width: min(450px, calc(100% - 32px));
+  padding: 36px;
+  border: 1px solid #e8ddcb;
+  border-radius: 14px;
+  background: #fcf9f3;
+  color: var(--ink);
+  box-shadow: 0 30px 80px #0005;
+}
+.notice-dialog::backdrop {
+  background: #06132dc9;
+  backdrop-filter: blur(4px);
+}
+.notice-dialog h2 {
+  font-size: 1.8rem;
+}
+.notice-dialog p {
+  color: #66738b;
+}
+.modal-close {
+  min-width: 36px;
+  min-height: 36px;
+  margin: -12px -14px 0 8px;
+  border-radius: 5px;
+  line-height: 1;
+}
+.modal-close:hover {
+  background: #ece5d9;
+}
+.footer .brand-title {
+  font-family: "Outfit", sans-serif !important;
+  font-size: 1.1rem !important;
+  white-space: normal;
+}
+.footer .brand-title small {
+  font-size: 0.55rem !important;
+}
+.footer .brand {
+  min-width: 0;
+}
+@media (min-width: 961px) {
+  .mobile-links,
+  .mobile-links.open {
+    display: none !important;
+  }
+}
+@media (max-width: 960px) {
+  .menu {
+    display: block;
+    min-width: 40px;
+    min-height: 44px;
+  }
+  .mobile-links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0 18px;
+    background: #001840;
+    color: #fff;
+  }
+  .mobile-links a {
+    padding: 12px 16px;
+  }
+  .mobile-links a:hover {
+    background: #ffffff08;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+@media (min-width: 761px) and (max-width: 1024px) {
+  .fact:nth-child(2) {
+    border-right: 0;
+  }
+  .fact:nth-child(-n + 2) {
+    border-bottom: 1px solid #e8ddcb;
+  }
+}
+@media (max-width: 840px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .intro-grid h2 {
+    max-width: 100%;
+  }
+  .facts-panel .fact {
+    padding-left: 18px;
+  }
+  .hero-grid {
+    gap: 45px;
+  }
+}
+@media (max-width: 560px) {
+  .nav-inner {
+    gap: 8px;
+  }
+  .nav-end {
+    gap: 2px;
+  }
+  .brand {
+    gap: 5px;
+  }
+  .brand-title {
+    font-size: 1rem !important;
+  }
+  .brand-title small {
+    max-width: 145px;
+  }
+  .nav-end .btn {
+    padding: 10px 9px;
+    font-size: 0.68rem;
+  }
+  .menu {
+    font-size: 24px;
+    min-width: 32px;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 10vw, 2.7rem);
+  }
+  .hero .eyebrow {
+    font-size: 0.65rem;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .hero-art:after {
+    inset: 12px -7px -12px 7px;
+  }
+  .countdown {
+    gap: 18px;
+  }
+  .footer-grid {
+    gap: 30px;
+  }
+  .partner-area,
+  .cta {
+    padding: 65px 0;
+  }
+  .cta .btn {
+    white-space: normal;
+  }
+  .showcase-points {
+    grid-template-columns: 1fr;
+  }
+  .hero-art > img,
+  .hero-art:after {
+    border-radius: 70px 12px 70px 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .btn:hover,
+  .zone:hover {
+    transform: none;
+  }
+}
+@media (max-width: 360px) {
+  .brand-mark { width: 36px; }
+  .brand-title { font-size: .88rem !important; }
+  .brand-title small { max-width: 120px; font-size: .37rem !important; }
+  .nav-end .btn { padding: 8px; font-size: .65rem; }
+}
