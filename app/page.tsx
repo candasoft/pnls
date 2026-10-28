@@ -23,9 +23,9 @@ export default function HomePage() {
         <Hero />
         <FestivalFacts />
         <AboutFestival />
+        <VirtualExhibition />
         <EducationZones />
         <FestivalAttractions />
-        <VirtualExhibition />
         <ExhibitorIntroduction />
         <StageProgram />
         <VisitorGuide />

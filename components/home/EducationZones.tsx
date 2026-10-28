@@ -1,4 +1,39 @@
+﻿"use client";
+
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+
+const zones = [
+  { title: "Academic Zone", description: "Preschools, primary and secondary schools, GED, IGCSE and A-Level programs.", image: "education.png", tint: "#f2d9bd", link: "Explore Academic Pathways" },
+  { title: "Higher Education Zone", description: "Explore colleges, local private universities, business schools and degree pathways.", image: "university.png", tint: "#d9e2ef", link: "Explore Higher Education" },
+  { title: "Language Zone", description: "English, IELTS preparation and other foreign language programs for every ambition.", image: "blended-learning.png", tint: "#d9e9dd", link: "Explore Language Programs" },
+  { title: "Skill Zone", description: "Vocational training, professional skills, engineering, arts and career development.", image: "training.png", tint: "#e6dced", link: "Explore Skills Training" },
+  { title: "Overseas Education Zone", description: "Study abroad advisors, international universities, application guidance and scholarships.", image: "paper-plane.png", tint: "#d2e8eb", link: "Explore Global Opportunities" },
+  { title: "Education Services Zone", description: "Technology, education finance, insurance, books and travel support services.", image: "online-learning.png", tint: "#f0e4be", link: "Explore Education Services" },
+];
+
 export function EducationZones() {
+  const gallery = useRef<HTMLDivElement>(null);
+  const [edges, setEdges] = useState({ start: true, end: false });
+
+  useEffect(() => {
+    const element = gallery.current;
+    if (!element) return;
+    const update = () => setEdges({ start: element.scrollLeft <= 8, end: element.scrollLeft + element.clientWidth >= element.scrollWidth - 2 });
+    update();
+    element.addEventListener("scroll", update, { passive: true });
+    const observer = new ResizeObserver(update);
+    observer.observe(element);
+    return () => { element.removeEventListener("scroll", update); observer.disconnect(); };
+  }, []);
+
+  function move(direction: number) {
+    const element = gallery.current;
+    if (!element) return;
+    const card = element.firstElementChild as HTMLElement | null;
+    const distance = (card?.offsetWidth ?? 300) + parseFloat(getComputedStyle(element).columnGap);
+    element.scrollBy({ left: distance * direction, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+  }
+
   return (
     <section className="section zones" id="zones">
       <div className="container">
@@ -6,89 +41,38 @@ export function EducationZones() {
           <div>
             <span className="eyebrow">Explore your future</span>
             <h2>Six Zones. One World of Opportunities.</h2>
-            <p className="lead">
-              Whatever your education goals or career ambitions, find your
-              starting point in our six specialized zones.
-            </p>
+            <p className="lead">Whatever your education goals or career ambitions, find your starting point in our six specialized zones.</p>
           </div>
-          <a href="#plan" className="btn btn-outline">
-            Plan Your Visit →
-          </a>
+          <a href="#plan" className="btn btn-outline">Plan Your Visit →</a>
         </div>
-        <div className="zones-grid">
-          <article className="zone">
-            <div className="zone-top">
-              <span className="zone-icon">♧</span>
-              <span className="zone-number">01</span>
-            </div>
-            <h3>Academic Zone</h3>
-            <p>
-              Preschools, primary and secondary schools, GED, IGCSE and A-Level
-              programs.
-            </p>
-            <a href="#plan">Explore Academic Pathways ↗</a>
-          </article>
-          <article className="zone">
-            <div className="zone-top">
-              <span className="zone-icon">▥</span>
-              <span className="zone-number">02</span>
-            </div>
-            <h3>Higher Education Zone</h3>
-            <p>
-              Explore colleges, local private universities, business schools and
-              degree pathways.
-            </p>
-            <a href="#plan">Explore Higher Education ↗</a>
-          </article>
-          <article className="zone">
-            <div className="zone-top">
-              <span className="zone-icon">✳</span>
-              <span className="zone-number">03</span>
-            </div>
-            <h3>Language Zone</h3>
-            <p>
-              English, IELTS preparation and other foreign language programs for
-              every ambition.
-            </p>
-            <a href="#plan">Explore Language Programs ↗</a>
-          </article>
-          <article className="zone">
-            <div className="zone-top">
-              <span className="zone-icon">⚙</span>
-              <span className="zone-number">04</span>
-            </div>
-            <h3>Skill Zone</h3>
-            <p>
-              Vocational training, professional skills, engineering, arts and
-              career development.
-            </p>
-            <a href="#plan">Explore Skills Training ↗</a>
-          </article>
-          <article className="zone">
-            <div className="zone-top">
-              <span className="zone-icon">✈</span>
-              <span className="zone-number">05</span>
-            </div>
-            <h3>Overseas Education Zone</h3>
-            <p>
-              Study abroad advisors, international universities, application
-              guidance and scholarships.
-            </p>
-            <a href="#plan">Explore Global Opportunities ↗</a>
-          </article>
-          <article className="zone">
-            <div className="zone-top">
-              <span className="zone-icon">✦</span>
-              <span className="zone-number">06</span>
-            </div>
-            <h3>Education Services Zone</h3>
-            <p>
-              Technology, education finance, insurance, books and travel support
-              services.
-            </p>
-            <a href="#plan">Explore Education Services ↗</a>
-          </article>
+        <div className="zone-gallery-stage">
+          <div className="zone-gallery" id="zone-gallery" ref={gallery} role="region" aria-label="Six education zones" tabIndex={0}>
+          {zones.map((zone, index) => (
+            <article className="zone-gallery-card" key={zone.title} style={{ "--zone-tint": zone.tint } as CSSProperties}>
+              <div className="zone-gallery-copy">
+                <span className="zone-gallery-kicker">Find your pathway</span>
+                <h3>{zone.title}</h3>
+                <p>{zone.description}</p>
+              </div>
+              <div className="zone-gallery-art" aria-hidden="true">
+                <img src={`/images/zones/${zone.image}`} width={180} height={180} alt="" loading="lazy" />
+              </div>
+              <div className="zone-gallery-footer">
+                <span className="zone-gallery-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                <a href="#plan" aria-label={zone.link}>Explore zone <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          ))}
         </div>
+          <div className="zone-gallery-controls">
+            <button type="button" aria-label="Previous education zone" aria-controls="zone-gallery" disabled={edges.start} onClick={() => move(-1)}>←</button>
+            <button type="button" aria-label="Next education zone" aria-controls="zone-gallery" disabled={edges.end} onClick={() => move(1)}>→</button>
+          </div>
+        </div>
+        <div className="zone-study-scene" aria-hidden="true">
+          <img src="/images/zones/study-desk.webp" width={1500} height={600} alt="" loading="lazy" />
+        </div>
+        <p className="zone-gallery-caption">Six starting points. Your next chapter.</p>
       </div>
     </section>
   );

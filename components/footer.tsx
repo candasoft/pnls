@@ -32,11 +32,12 @@
           <div>
             <h3>Explore</h3>
             <div className="footer-links">
-              <a href="#about">About the Festival</a>
-              <a href="#zones">Six Education Zones</a>
-              <a href="#activities">Festival Attractions</a>
-              <a href="#virtual">Virtual Exhibition</a>
-              <a href="#partners">Our Partners</a>
+              <a href="/#about">About the Festival</a>
+              <a href="/#zones">Six Education Zones</a>
+              <a href="/#activities">Festival Attractions</a>
+              <a href="/virtual-exhibition">Virtual Exhibition</a>
+              <a href="/virtual-experience">Virtual Experience</a>
+              <a href="/#partners">Our Partners</a>
             </div>
           </div>
           <div>

@@ -8,9 +8,9 @@ export function Hero() {
         <div>
           <span className="eyebrow">ပညာလမ်းဆုံ &nbsp; • &nbsp; 2027</span>
           <h1>
-            One Festival.
+            ပညာလမ်းဆုံ
             <br />
-            <em>Infinite Possibilities.</em>
+            <em className="hero-festival-title">Education &amp; Career Pathways Festival</em>
           </h1>
           <p
             style={{
@@ -33,7 +33,7 @@ export function Hero() {
             >
               Register to Visit <span>↗</span>
             </NoticeButton>
-            <a className="btn btn-light" href="#virtual">
+            <a className="btn btn-light" href="/virtual-exhibition">
               Explore Virtual Expo <span>→</span>
             </a>
           </div>
@@ -52,10 +52,25 @@ export function Hero() {
             height={760}
           />
           <div className="hero-side">
-            <span className="star">✦</span>
+            <svg
+              className="hero-date-icon"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="3" y="5" width="18" height="16" rx="2" />
+              <path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2M8 18h2" />
+            </svg>
             <div>
-              <b>30–31 JAN</b>
-              <small>2027 · Yangon, Myanmar</small>
+              <b>30–31 JAN 2027</b>
+              Fortune Plaza, Yangon
             </div>
           </div>
         </div>

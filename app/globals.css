@@ -294,7 +294,7 @@ img {
   position: absolute;
   bottom: -31px;
   left: -24px;
-  background: white;
+  background: rgb(247, 239, 231);
   color: #132547;
   padding: 18px 23px;
   box-shadow: 0 18px 42px #0004;
@@ -481,7 +481,7 @@ img {
 .showcase-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 70px;
+  gap: 20px;
   align-items: center;
 }
 .showcase h2 {

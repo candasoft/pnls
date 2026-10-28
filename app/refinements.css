@@ -4,8 +4,43 @@
 html {
   scroll-padding-top: 110px;
 }
+.nav .nav-inner {
+  min-height: 104px;
+}
+.nav .brand {
+  min-width: 140px;
+  flex-shrink: 0;
+}
+.nav .brand-mark {
+  width: 132px;
+  height: 91px;
+}
+.nav .nav-links a {
+  font-size: 1rem;
+}
+.nav .nav-end .lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  border: 1px solid #e7bd6938;
+  border-radius: 7px;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+.nav .nav-end .lang:hover {
+  background: #ffffff0d;
+  border-color: var(--gold);
+}
 body {
   overflow-wrap: break-word;
+}
+.fact-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 :focus-visible {
   outline: 3px solid #b58d46;
@@ -58,6 +93,21 @@ body {
 .hero-mini {
   margin-top: 24px;
 }
+.hero-date-icon {
+  color: #b88b3d;
+  flex-shrink: 0;
+}
+.hero h1 {
+  font-size: clamp(2rem, 3.75vw, 3rem);
+}
+.hero .hero-festival-title {
+  display: block;
+  margin-top: 14px;
+  font-size: clamp(0.9rem, 1.85vw, 1.55rem);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
 .event-status {
   margin-top: 25px;
   color: #f6d48e !important;
@@ -66,6 +116,49 @@ body {
 .showcase img {
   width: 100%;
   height: auto;
+}
+#about {
+  --section-blend: clamp(48px, 7vw, 100px);
+  background: linear-gradient(
+    to bottom,
+    var(--cream) 0,
+    #fffdf8 var(--section-blend),
+    #fffdf8 calc(100% - var(--section-blend)),
+    var(--cream) 100%
+  );
+}
+#about .intro-grid {
+  grid-template-columns: 70% minmax(0, 1fr);
+  gap: 48px 32px;
+}
+#about .intro-heading {
+  grid-column: 1 / -1;
+}
+#about .intro-heading h2 {
+  max-width: none;
+  margin-bottom: 0;
+}
+#about .intro-image img {
+  height: auto;
+  object-fit: contain;
+}
+#about .intro-accent {
+  top: 0;
+  left: 16px;
+  transform: translateY(-50%);
+  right: auto;
+  bottom: auto;
+  max-width: none;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  padding: 16px 18px;
+}
+@media (max-width: 960px) {
+  #about .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 .notice-dialog {
   width: min(450px, calc(100% - 32px));
@@ -114,6 +207,10 @@ body {
   }
 }
 @media (max-width: 960px) {
+  .nav .nav-inner { min-height: 86px; }
+  .nav .brand { min-width: 100px; }
+  .nav .brand-mark { width: 100px; height: 69px; }
+  .mobile-links a { font-size: 1rem; }
   .menu {
     display: block;
     min-width: 40px;
@@ -146,6 +243,13 @@ body {
   }
 }
 @media (max-width: 840px) {
+  #about .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .hero .hero-festival-title {
+    font-size: clamp(0.78rem, 3.4vw, 1.55rem);
+  }
   .intro-grid {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -185,7 +289,7 @@ body {
     min-width: 32px;
   }
   .hero h1 {
-    font-size: clamp(2.4rem, 10vw, 2.7rem);
+    font-size: clamp(1.8rem, 8vw, 2.1rem);
   }
   .hero .eyebrow {
     font-size: 0.65rem;
@@ -233,6 +337,10 @@ body {
   }
 }
 @media (max-width: 360px) {
+  .nav .nav-inner { min-height: 76px; }
+  .nav .brand { min-width: 84px; }
+  .nav .brand-mark { width: 84px; height: 58px; }
+  .nav .nav-end .lang { width: 36px; height: 40px; padding: 6px; }
   .brand-mark { width: 36px; }
   .brand-title { font-size: .88rem !important; }
   .brand-title small { max-width: 120px; font-size: .37rem !important; }

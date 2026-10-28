@@ -1,14 +1,12 @@
-import { NoticeButton } from "@/components/notice-provider";
-
 export function VirtualExhibition() {
   return (
     <section className="section showcase" id="virtual">
       <div className="container showcase-grid">
         <div>
           <span className="eyebrow">Digital experience</span>
-          <h2>Your Future Is Still Within Reach—Wherever You Are.</h2>
+          <h2>Can't attend in person? <br></br>Join Virtual Exhibition</h2>
           <p>
-            Can't attend in person? Explore education opportunities through the
+            Your Future Is Still Within Reach—Wherever You Are. Explore education opportunities through the
             Pyinyar Lam Sone Virtual Exhibition. Discover participating
             institutions, digital brochures, course information, videos and ways
             to connect online.
@@ -19,19 +17,19 @@ export function VirtualExhibition() {
             <span>Digital Brochures</span>
             <span>Inquiries & Consultations</span>
           </div>
-          <NoticeButton
+          <a
             className="btn btn-gold"
-            message="Virtual booth access will be activated as participating institutions complete their profiles."
+            href="/virtual-exhibition"
           >
             Enter Virtual Exhibition ↗
-          </NoticeButton>
+          </a>
         </div>
         <img
           loading="lazy"
-          src="/images/virtual-expo.webp"
-          alt="Concept visual showing the virtual education exhibition platform and remote participation"
-          width={1050}
-          height={591}
+          src="/images/virtual-education-fair-workspace.webp"
+          alt="Illustration of a student exploring virtual education booths, digital brochures and an online consultation from her laptop"
+          width={1536}
+          height={1024}
         />
       </div>
     </section>

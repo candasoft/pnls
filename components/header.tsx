@@ -7,11 +7,12 @@ const links = [
   ["#top", "Home"],
   ["#about", "About"],
   ["#zones", "Education zones"],
+  ["/virtual-exhibition", "Virtual expo"],
   ["#plan", "Plan your visit"],
   ["#partners", "Partners"],
 ] as const;
 
-export function Header() {
+export function Header({ exhibition = false, experience = false }: { exhibition?: boolean; experience?: boolean }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#top");
 
@@ -35,7 +36,7 @@ export function Header() {
       { rootMargin: "-20% 0px -60% 0px", threshold: 0 },
     );
     links.forEach(([href]) => {
-      const section = document.querySelector(href);
+      const section = href.startsWith("#") ? document.querySelector(href) : null;
       if (section) observer.observe(section);
     });
     document.addEventListener("keydown", onKey);
@@ -51,9 +52,9 @@ export function Header() {
     return links.map(([href, label]) => (
       <a
         key={href}
-        href={href}
-        className={active === href ? "active" : undefined}
-        aria-current={active === href ? "location" : undefined}
+        href={exhibition && href.startsWith("#") ? `/${href}` : href}
+        className={(exhibition ? href === "/virtual-exhibition" : active === href) ? "active" : undefined}
+        aria-current={exhibition ? (href === "/virtual-exhibition" ? (experience ? "location" : "page") : undefined) : (active === href ? "location" : undefined)}
         onClick={() => {
           setActive(href);
           setOpen(false);
@@ -78,7 +79,7 @@ export function Header() {
       <header className="nav">
         <div className="container nav-inner">
           <a
-            href="#top"
+            href="/"
             className="brand"
             aria-label="ပညာလမ်းဆုံ — Homepage"
             onClick={() => setOpen(false)}
@@ -86,8 +87,8 @@ export function Header() {
             <img
               className="brand-mark"
               src="/images/festival-logo.png"
-              width="68"
-              height="94"
+              width="132"
+              height="91"
               alt=""
             />
             {/*
@@ -105,10 +106,24 @@ export function Header() {
           <div className="nav-end">
             <NoticeButton
               className="lang"
+              aria-label="Change language"
               title="Language availability"
               message="Myanmar-language content is being prepared. The festival home page is currently available in English."
             >
-              EN / <span lang="my">မြန်မာ</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1m14 20-5-10-5 10M14 18h6" />
+              </svg>
             </NoticeButton>
             <NoticeButton
               className="btn btn-gold"
