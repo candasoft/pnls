@@ -131,6 +131,9 @@ body {
   grid-template-columns: 70% minmax(0, 1fr);
   gap: 48px 32px;
 }
+#about .intro-grid p {
+  color: #000;
+}
 #about .intro-heading {
   grid-column: 1 / -1;
 }

@@ -1,0 +1,109 @@
+/* Keep grid items shrinkable instead of allowing intrinsic content to widen
+   the page. Horizontal scrolling belongs inside galleries and maps only. */
+.hero-grid > *,
+.intro-grid > *,
+.showcase-grid > *,
+.info-banner > *,
+.footer-grid > *,
+.facts-panel > *,
+.expo-hero-grid > *,
+.expo-booth-grid > *,
+.vx-workspace > * {
+  min-width: 0;
+}
+
+@media (max-width: 960px) {
+  .mobile-links.open {
+    max-height: calc(100dvh - 86px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .mobile-links a { min-height: 44px; }
+  .hero-grid,
+  .showcase-grid,
+  .info-banner { grid-template-columns: minmax(0, 1fr); }
+  .hero { min-height: 0; }
+  .showcase-grid { gap: 32px; }
+  .footer-grid { gap: 32px; }
+}
+
+@media (max-width: 600px) {
+  .container { width: calc(100% - 32px); }
+  html { scroll-padding-top: 88px; }
+  .nav .nav-inner { min-height: 80px; gap: 8px; }
+  .nav .brand { min-width: 88px; }
+  .nav .brand-mark { width: 88px; height: 61px; }
+  .nav .nav-end { gap: 6px; }
+  .nav .nav-end .lang,
+  .nav .menu { width: 44px; min-width: 44px; height: 44px; padding: 8px; }
+  .nav .nav-register { min-height: 44px; padding: 10px 8px; font-size: 0.75rem; }
+  .nav-register-now { display: none; }
+  .mobile-links.open { max-height: calc(100dvh - 80px); }
+
+  .hero-grid { padding: 40px 0 72px; gap: 36px; }
+  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.3rem); }
+  .hero .hero-festival-title { font-size: clamp(0.875rem, 3.7vw, 1.125rem); }
+  .hero p { font-size: 0.95rem; line-height: 1.7; }
+  .hero-actions { margin-top: 24px; gap: 10px; }
+  .hero-actions .btn { width: 100%; min-height: 48px; padding: 12px 16px; }
+  .hero-mini { gap: 8px 14px; }
+  .countdown { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; max-width: 340px; }
+  .countdown div { min-width: 0; }
+  .hero-art > img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+  .hero-side { left: 12px; bottom: -20px; max-width: calc(100% - 24px); padding: 12px 14px; gap: 10px; }
+  .hero-side b { font-size: clamp(1rem, 5vw, 1.4rem); }
+  .hero-side > div { min-width: 0; font-size: 0.8rem; }
+
+  .section { padding: 56px 0; }
+  .section h2 { font-size: clamp(1.65rem, 7vw, 2rem); }
+  .sect-head { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .lead { font-size: 0.95rem; }
+  #about .intro-grid { gap: 36px; }
+  #about .intro-accent { left: 10px; padding: 12px 14px; font-size: 0.7rem; letter-spacing: 0.025em; }
+  #about .intro-grid p { font-size: 0.95rem; line-height: 1.75; }
+  .showcase-points { gap: 12px; }
+  .showcase .btn { min-height: 48px; padding: 12px 16px; white-space: normal; }
+  .attractions-grid,
+  .schedule,
+  .split-cards,
+  .footer-grid { grid-template-columns: minmax(0, 1fr); }
+  .attraction,
+  .session,
+  .image-card-body { padding: 22px; }
+  .info-banner .body { padding: 24px; }
+  .info-banner h2 { font-size: clamp(1.65rem, 7vw, 2rem); }
+  .info-banner .btn { width: 100%; padding: 12px; white-space: normal; }
+  .info-banner img { height: auto; }
+  .partner-area,
+  .cta { padding: 56px 0; }
+  .partner-placeholder { padding: 24px 16px; }
+  .cta h2 { font-size: clamp(1.75rem, 7vw, 2.1rem); }
+  .cta .btn { display: flex; margin: 12px 0 0; min-height: 48px; }
+  .footer { padding-top: 40px; }
+  .footer-bottom { margin-top: 30px; }
+  .footer a { overflow-wrap: anywhere; }
+  .notice-dialog { max-height: calc(100dvh - 32px); overflow-y: auto; padding: 26px; }
+
+  .expo-hero-actions { flex-wrap: wrap; }
+  .expo-section-heading { flex-wrap: wrap; }
+  .expo-saved { margin-top: 0; }
+  .expo-benefit-bar .container { flex-wrap: wrap; }
+  .expo-image-note { left: 0; max-width: 100%; }
+  .expo-breadcrumb,
+  .vx-breadcrumb { flex-wrap: wrap; }
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+  .facts-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts-panel .fact { flex-direction: column; gap: 10px; padding: 16px; border-bottom: 1px solid #e8ddcb; }
+  .facts-panel .fact:nth-child(odd) { border-right: 1px solid #e8ddcb; }
+  .facts-panel .fact:nth-last-child(-n+2) { border-bottom: 0; }
+  .fact-copy b { font-size: 1.65rem; }
+  .fact-copy strong { font-size: 0.65rem; line-height: 1.5; }
+}
+
+@media (max-width: 359px) {
+  .nav .brand { min-width: 76px; }
+  .nav .brand-mark { width: 76px; height: 53px; }
+  .nav .nav-end { gap: 4px; }
+}

@@ -3,6 +3,7 @@ import { NoticeProvider } from "@/components/notice-provider";
 import "./globals.css";
 import "./refinements.css";
 import "./zone-gallery.css";
+import "./mobile.css";
 
 export const metadata: Metadata = {
   title: "Pyinyar Lam Sone 2027 | Education & Career Pathways Festival",

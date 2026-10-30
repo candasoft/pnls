@@ -18,7 +18,7 @@ export function Header({ exhibition = false, experience = false }: { exhibition?
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
+      if (event.key === "Escape" && document.getElementById("menu-toggle")?.getAttribute("aria-expanded") === "true") {
         setOpen(false);
         document.getElementById("menu-toggle")?.focus();
       }
@@ -126,11 +126,12 @@ export function Header({ exhibition = false, experience = false }: { exhibition?
               </svg>
             </NoticeButton>
             <NoticeButton
-              className="btn btn-gold"
+              className="btn btn-gold nav-register"
+              aria-label="Register Now"
               title="Visitor registration"
               message="Visitor registration is being prepared. Please contact the organizing team for current registration information."
             >
-              Register Now ↗
+              <span>Register<span className="nav-register-now"> Now</span> ↗</span>
             </NoticeButton>
             <button
               type="button"
