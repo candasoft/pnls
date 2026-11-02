@@ -1,0 +1,86 @@
+.page { background: #fcfaf6; }
+.hero { padding: 28px 0 0; background: var(--cream); }
+.breadcrumb { display: flex; gap: 12px; color: #647087; font-size: .78rem; }
+.breadcrumb a:hover { text-decoration: underline; }
+.heroHeading { display: grid; grid-template-columns: 1.4fr 1fr; align-items: end; gap: 90px; padding: 56px 0 58px; }
+.heroHeading h1 { margin: 0; max-width: 680px; font-size: clamp(2.8rem, 4.5vw, 4rem); line-height: 1.08; }
+.heroHeading h1 span { color: #967032; }
+.heroHeading > p { color: #58657b; max-width: 370px; padding-left: 24px; border-left: 2px solid #c6a366; margin: 0 0 5px; line-height: 1.8; }
+.contactSection { padding: 24px 0 80px; background: linear-gradient(var(--cream) 100px, #fcfaf6 100px); }
+.contactGrid { display: grid; grid-template-columns: .88fr 1.35fr; gap: 0; border: 1px solid #e5ddcf; border-radius: 20px; overflow: hidden; box-shadow: 0 18px 55px #634b2410; }
+.contactGrid > *, .visitInner > * { min-width: 0; }
+.team { position: relative; padding: 46px 38px; color: white; background: radial-gradient(ellipse at 100% 100%, #263659, transparent 65%), var(--navy); }
+.team .eyebrow { color: var(--gold2); font-size: .65rem; }
+.envelope { width: 70px; height: 70px; padding: 13px; border: 1px solid #e7bd6955; border-radius: 50%; color: var(--gold2); margin-bottom: 32px; }
+.envelope svg { width: 100%; height: 100%; }
+.team h2 { font-size: clamp(2rem, 3vw, 2.7rem); margin-bottom: 20px; }
+.team > p { color: #c1cadb; font-size: .94rem; line-height: 1.8; }
+.teamDetail { border-top: 1px solid #ffffff24; padding-top: 22px; margin-top: 26px; }
+.teamDetail > span { display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; color: #b9c5d9; margin-bottom: 8px; }
+.teamDetail a { font-size: clamp(.82rem, 1.3vw, 1rem); color: #f6d48e; overflow-wrap: anywhere; }
+.teamDetail a span { display: inline-block; margin-left: 5px; }
+.teamDetail strong { font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 500; }
+.teamDetail p { color: #c1cadb; font-size: .85rem; margin: 0; }
+.teamDetail address { font-size: .9rem; font-style: normal; color: #c1cadb; }
+.contactPeople { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.contactPeople li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: .86rem; }
+.contactPeople a { white-space: nowrap; font-size: .86rem; }
+.websites { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: .79rem; }
+.team a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.teamNote { border-top: 1px solid #ffffff24; margin-top: 38px; padding-top: 25px; font-family: 'Outfit', sans-serif; font-size: 1.12rem; color: var(--gold2); }
+.teamNote span { font-family: 'DM Sans', sans-serif; font-size: .78rem; color: #b9c5d9; }
+.formPanel { background: #fff; padding: 44px 46px 32px; }
+.formPanel h2 { font-size: 2.4rem; margin-bottom: 12px; }
+.formPanel > p { color: #66738b; font-size: .92rem; margin-bottom: 28px; }
+.form { display: grid; gap: 20px; }
+.fields { display: grid; gap: 20px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.form button:disabled { opacity: .65; cursor: wait; transform: none; }
+.error { margin: 0; color: #a03528; font-size: .8rem; overflow-wrap: anywhere; }
+.error a { text-decoration: underline; }
+.fieldRow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.form label { display: block; font-size: .8rem; font-weight: 700; color: #263751; min-width: 0; }
+.form label > span { color: #967032; }
+.form label .optional { font-weight: 400; color: #66738b; }
+.form input, .form select, .form textarea { display: block; width: 100%; border: 1px solid #dce0e6; border-radius: 6px; background: #fdfcfa; color: var(--ink); padding: 12px 13px; font: 400 .86rem/1.5 'DM Sans', sans-serif; margin-top: 8px; min-height: 48px; }
+.form input::placeholder, .form textarea::placeholder { color: #778192; opacity: 1; }
+.form textarea { resize: vertical; min-height: 130px; }
+.form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid #b58d46; outline-offset: 2px; border-color: #b58d46; }
+.formNote { margin: -2px 0 0; font-size: .75rem; color: #657087; line-height: 1.7; }
+.form button { justify-self: start; min-width: 190px; }
+.status { margin: 0; font-size: .8rem; color: #425672; overflow-wrap: anywhere; }
+.status:empty { display: none; }
+.status a { text-decoration: underline; }
+.visit { padding: 64px 0 76px; background: #f0ebe2; border-top: 1px solid #e5ddcf; }
+.visitInner { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+.visit h2 { font-size: clamp(2rem, 3.2vw, 2.8rem); margin-bottom: 28px; }
+.venueMap { display: block; width: 100%; height: 340px; border: 1px solid #d8cebc; border-radius: 14px; background: #e5ddcf; }
+.visit a { white-space: normal; }
+.eventDetails > div { display: flex; gap: 22px; border-bottom: 1px solid #d8cebc; padding: 22px 0; }
+.detailNumber { color: #967032; font: 400 .85rem 'Outfit', sans-serif; padding-top: 4px; }
+.eventDetails h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.eventDetails p { font-size: .92rem; color: #58657b; margin: 0; }
+.eventDetails > a { display: inline-flex; gap: 32px; margin-top: 22px; font-size: .85rem; font-weight: 700; }
+.eventDetails > a:hover { text-decoration: underline; }
+@media (max-width: 1050px) {
+  .heroHeading { gap: 44px; }
+  .team { padding: 36px 28px; }
+  .formPanel { padding: 36px 28px; }
+  .fieldRow { grid-template-columns: 1fr; }
+  .visitInner { gap: 50px; }
+}
+@media (max-width: 700px) {
+  .heroHeading { grid-template-columns: 1fr; gap: 26px; padding: 38px 0 40px; }
+  .heroHeading h1 { font-size: clamp(2.5rem, 9vw, 3.5rem); }
+  .heroHeading > p { max-width: 100%; }
+  .contactSection { padding-bottom: 48px; }
+  .contactGrid { grid-template-columns: 1fr; border-radius: 14px; }
+  .team { padding: 30px 24px; }
+  .envelope { margin-bottom: 22px; }
+  .teamDetail a { font-size: .92rem; }
+  .teamNote { margin-top: 24px; }
+  .formPanel { padding: 32px 24px; }
+  .formPanel h2 { font-size: 2rem; }
+  .form button { width: 100%; }
+  .visit { padding: 44px 0; }
+  .visitInner { grid-template-columns: 1fr; gap: 20px; }
+}

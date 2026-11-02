@@ -1,5 +1,3 @@
-import { NoticeButton } from "@/components/notice-provider";
-
 export function VisitorGuide() {
   return (
     <section className="section" id="plan">
@@ -21,12 +19,12 @@ export function VisitorGuide() {
             <br />
             Myanmar Expo Hall (Fortune Plaza), Thaketa Township, Yangon
           </p>
-          <NoticeButton
+          <a
             className="btn btn-gold"
-            message="The detailed booth map and assigned exhibitor locations will be published when finalized."
+            href="/floor-plan"
           >
             Explore the Floor Plan ↗
-          </NoticeButton>
+          </a>
         </div>
         <img
           loading="lazy"

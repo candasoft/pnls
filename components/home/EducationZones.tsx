@@ -57,7 +57,7 @@ export function EducationZones() {
               </div>
               <div className="zone-gallery-footer">
                 <span className="zone-gallery-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-                <a href="#plan" aria-label={zone.link}>Explore zone <span aria-hidden="true">↗</span></a>
+                <a href={`/zones/${["academic", "higher-education", "language", "skills", "overseas", "services"][index]}`} aria-label={zone.link}>Explore zone <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           ))}

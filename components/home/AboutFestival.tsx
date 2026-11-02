@@ -41,7 +41,7 @@ export function AboutFestival() {
             <span className="pill">✦ Innovation</span>
           </div>
           */}
-          <a href="#zones" className="btn btn-navy">
+          <a href="/about" className="btn btn-navy">
             Discover the Festival &nbsp; →
           </a>
         </div>

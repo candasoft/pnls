@@ -18,6 +18,14 @@ html {
 .nav .nav-links a {
   font-size: 1rem;
 }
+@media (min-width: 961px) and (max-width: 1200px) {
+  .nav .nav-inner { gap: 14px; }
+  .nav .brand { min-width: 100px; }
+  .nav .brand-mark { width: 100px; height: 69px; }
+  .nav .nav-links { gap: 13px; }
+  .nav .nav-links a { font-size: .82rem; white-space: nowrap; }
+  .nav .nav-register { padding: 12px 14px; }
+}
 .nav .nav-end .lang {
   display: inline-flex;
   align-items: center;

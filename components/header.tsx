@@ -5,14 +5,15 @@ import { NoticeButton } from "./notice-provider";
 
 const links = [
   ["#top", "Home"],
-  ["#about", "About"],
-  ["#zones", "Education zones"],
-  ["/virtual-exhibition", "Virtual expo"],
-  ["#plan", "Plan your visit"],
+  ["/about", "About"],
+  ["/zones", "Zones"],
+  ["/virtual-exhibition", "Virtual Expo"],
+  ["/floor-plan", "Floor Plan"],
   ["#partners", "Partners"],
+  ["/contact", "Contact"],
 ] as const;
 
-export function Header({ exhibition = false, experience = false }: { exhibition?: boolean; experience?: boolean }) {
+export function Header({ exhibition = false, experience = false, about = false, contact = false, floorPlan = false, zones = false }: { exhibition?: boolean; experience?: boolean; about?: boolean; contact?: boolean; floorPlan?: boolean; zones?: boolean }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#top");
 
@@ -52,9 +53,9 @@ export function Header({ exhibition = false, experience = false }: { exhibition?
     return links.map(([href, label]) => (
       <a
         key={href}
-        href={exhibition && href.startsWith("#") ? `/${href}` : href}
-        className={(exhibition ? href === "/virtual-exhibition" : active === href) ? "active" : undefined}
-        aria-current={exhibition ? (href === "/virtual-exhibition" ? (experience ? "location" : "page") : undefined) : (active === href ? "location" : undefined)}
+        href={(exhibition || about || contact || floorPlan || zones) && href.startsWith("#") ? `/${href}` : href}
+        className={(zones ? href === "/zones" : floorPlan ? href === "/floor-plan" : contact ? href === "/contact" : about ? href === "/about" : exhibition ? href === "/virtual-exhibition" : active === href) ? "active" : undefined}
+        aria-current={zones ? (href === "/zones" ? "page" : undefined) : floorPlan ? (href === "/floor-plan" ? "page" : undefined) : contact ? (href === "/contact" ? "page" : undefined) : about ? (href === "/about" ? "page" : undefined) : exhibition ? (href === "/virtual-exhibition" ? (experience ? "location" : "page") : undefined) : (active === href ? "location" : undefined)}
         onClick={() => {
           setActive(href);
           setOpen(false);
@@ -104,27 +105,6 @@ export function Header({ exhibition = false, experience = false }: { exhibition?
             {navLinks()}
           </nav>
           <div className="nav-end">
-            <NoticeButton
-              className="lang"
-              aria-label="Change language"
-              title="Language availability"
-              message="Myanmar-language content is being prepared. The festival home page is currently available in English."
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1m14 20-5-10-5 10M14 18h6" />
-              </svg>
-            </NoticeButton>
             <NoticeButton
               className="btn btn-gold nav-register"
               aria-label="Register Now"

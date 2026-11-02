@@ -7,10 +7,10 @@
             <div className="brand" style={{ marginBottom: "18px" }}>
               <img
                 className="brand-mark"
-                src="/images/footer-logo.webp"
+                src="/images/festival-logo.png"
                 alt="Pyinyar Lam Sone logo"
-                width={400}
-                height={293}
+                width={132}
+                height={91}
               />
               <span className="brand-title" style={{ color: "white" }}>
                 PYINYAR LAM SONE
@@ -32,12 +32,14 @@
           <div>
             <h3>Explore</h3>
             <div className="footer-links">
-              <a href="/#about">About the Festival</a>
-              <a href="/#zones">Six Education Zones</a>
+              <a href="/about">About the Festival</a>
+              <a href="/zones">Six Education Zones</a>
               <a href="/#activities">Festival Attractions</a>
               <a href="/virtual-exhibition">Virtual Exhibition</a>
               <a href="/virtual-experience">Virtual Experience</a>
+              <a href="/floor-plan">Floor Plan</a>
               <a href="/#partners">Our Partners</a>
+              <a href="/contact">Contact Us</a>
             </div>
           </div>
           <div>

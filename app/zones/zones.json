@@ -1,0 +1,176 @@
+[
+  {
+    "slug": "academic",
+    "title": "Academic Zone",
+    "headline": "Strong Foundations. Brighter Futures.",
+    "description": [
+      "Every successful learning journey begins with a strong foundation. The Academic Zone brings together schools and academic education providers offering learning pathways for children and young people.",
+      "Whether you're choosing a school for your child or preparing for internationally recognized academic qualifications, explore the options available to support your education goals."
+    ],
+    "programs": [
+      "Preschool Education",
+      "Primary and Secondary Schools",
+      "GED Preparation",
+      "IGCSE Programs",
+      "A-Level Academies"
+    ],
+    "audience": "Parents, school-age students, students considering alternative academic qualifications, and families comparing school options.",
+    "questions": [
+      "What curriculum do you offer?",
+      "What are the admission requirements?",
+      "How is student progress assessed?",
+      "What are the tuition fees and learning support services?"
+    ],
+    "ctas": [
+      "Find Academic Exhibitors",
+      "Locate Academic Zone"
+    ],
+    "image": "academic-art.webp",
+    "tint": "#f2d9bd",
+    "kicker": "School & academic pathways"
+  },
+  {
+    "slug": "higher-education",
+    "title": "Higher Education Zone",
+    "headline": "Take the Next Step Toward Your Future.",
+    "description": [
+      "Your higher education journey can open doors to new knowledge, professional development, and career possibilities.",
+      "Meet universities, colleges, and business schools offering programs across different fields of study. Learn about qualifications, admissions, course structures, study options, and potential career directions."
+    ],
+    "programs": [
+      "Local Private Universities",
+      "Colleges",
+      "Business Schools",
+      "Undergraduate Programs",
+      "Postgraduate and Professional Study Options (where offered)"
+    ],
+    "audience": "High school graduates, prospective university students, degree holders seeking further study, and working professionals.",
+    "questions": [
+      "What qualifications are awarded?",
+      "What are the entry requirements?",
+      "Are there flexible study options?",
+      "What is the total program cost?"
+    ],
+    "ctas": [
+      "Explore Universities & Colleges",
+      "View Exhibitors"
+    ],
+    "image": "higher-education-art.webp",
+    "tint": "#d9e2ef",
+    "kicker": "University & college pathways"
+  },
+  {
+    "slug": "language",
+    "title": "Language Zone",
+    "headline": "Learn a Language. Open New Doors.",
+    "description": [
+      "Language skills can help you communicate with confidence, prepare for international study, and expand professional opportunities."
+    ],
+    "programs": [
+      "General English",
+      "IELTS Preparation",
+      "Other Foreign Language Courses",
+      "Language Proficiency Preparation"
+    ],
+    "audience": "Students preparing for overseas study, language learners, job seekers, and professionals improving communication skills.",
+    "questions": [
+      "Are placement tests available?",
+      "How long is each course?",
+      "What teaching formats are offered?",
+      "Is exam preparation included?"
+    ],
+    "ctas": [
+      "Discover Language Schools",
+      "Explore Language Programs"
+    ],
+    "image": "language-art.webp",
+    "tint": "#d9e9dd",
+    "kicker": "Language & communication"
+  },
+  {
+    "slug": "skills",
+    "title": "Skill Zone",
+    "headline": "Build Skills. Create Opportunities.",
+    "description": [
+      "Practical knowledge and professional skills can make a meaningful difference in your education and career journey.",
+      "The Skill Zone introduces visitors to vocational training, technical education, creative learning, and professional development opportunities."
+    ],
+    "programs": [
+      "Vocational Training",
+      "Career Skills",
+      "Engineering and Technical Training",
+      "Medical-related Training",
+      "Arts",
+      "Entertainment and Sports",
+      "Maritime and Seafarer Training"
+    ],
+    "audience": "Graduates, job seekers, career changers, working professionals, and learners interested in hands-on training.",
+    "questions": [
+      "What practical training is included?",
+      "Is certification available?",
+      "What are the prerequisites?",
+      "What career pathways could the program support?"
+    ],
+    "ctas": [
+      "Explore Skills Training",
+      "Meet Training Providers"
+    ],
+    "image": "skill-art.webp",
+    "tint": "#e6dced",
+    "kicker": "Practical & professional learning"
+  },
+  {
+    "slug": "overseas",
+    "title": "Overseas Education Zone",
+    "headline": "Your Global Education Journey Starts Here.",
+    "description": [
+      "Dreaming of studying abroad? Discover international education opportunities and connect with study abroad advisors and overseas education providers."
+    ],
+    "programs": [
+      "Study Abroad Agencies",
+      "International Universities",
+      "Overseas Programs",
+      "Scholarship Information",
+      "Application Guidance"
+    ],
+    "audience": "Students planning international study, parents, university graduates, and learners researching scholarships.",
+    "questions": [
+      "What are the admission requirements?",
+      "What is the total estimated study cost?",
+      "Are scholarships available?",
+      "What application and visa support is offered?"
+    ],
+    "ctas": [
+      "Explore Overseas Opportunities",
+      "Connect With Study Advisors"
+    ],
+    "image": "overseas-art.webp",
+    "tint": "#d2e8eb",
+    "kicker": "International study & guidance"
+  },
+  {
+    "slug": "services",
+    "title": "Education Services Zone",
+    "headline": "Everything You Need to Support Your Learning Journey.",
+    "description": [
+      "Education goes beyond the classroom. The Education Services Zone brings together organizations offering products and services that help students, families, and professionals pursue their learning goals.",
+      "Discover useful solutions for education technology, financial planning, learning materials, and education-related travel."
+    ],
+    "programs": [
+      "IT Devices",
+      "Education Insurance",
+      "Banking and Education Loan Services",
+      "Bookshops and Learning Accessories",
+      "Travel and Tour Services"
+    ],
+    "audience": "Students, parents, education institutions, and professionals seeking practical support.",
+    "questions": [],
+    "ctas": [
+      "Discover Education Services",
+      "Explore Service Providers"
+    ],
+    "image": "services-art.webp",
+    "tint": "#f0e4be",
+    "kicker": "Support for every step"
+  }
+]
