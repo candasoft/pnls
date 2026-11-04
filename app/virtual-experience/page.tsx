@@ -3,6 +3,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BoothExperience } from "@/components/exhibition/booth-experience";
 import "./experience.css";
+import "./visual-booth.css";
 
 export const metadata: Metadata = {
   title: "Virtual Experience | Pyinyar Lam Sone 2027",

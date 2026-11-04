@@ -3,10 +3,12 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ExhibitionDirectory } from "@/components/exhibition/directory";
 import "./exhibition.css";
+import "./directory-cards.css";
+import "../virtual-experience/visual-booth.css";
 
 export const metadata: Metadata = {
   title: "Virtual Exhibition | Pyinyar Lam Sone 2027",
-  description: "Explore six education pathways, preview virtual booths, save your favorites and plan your next step at Pyinyar Lam Sone 2027.",
+  description: "Browse demo school and institution booths, filter by education zone, save favorites and step inside the virtual exhibition at Pyinyar Lam Sone 2027.",
 };
 
 export default function VirtualExhibitionPage() {
