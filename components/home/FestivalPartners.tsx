@@ -18,7 +18,7 @@ export function FestivalPartners() {
         </div>
         <a
           className="btn btn-outline"
-          href="mailto:meseventservices@gmail.com?subject=Pyinyar%20Lam%20Sone%202027%20Partnership%20Enquiry"
+          href="/partners"
         >
           Become a Partner →
         </a>

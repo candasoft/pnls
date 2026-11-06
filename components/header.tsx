@@ -9,11 +9,11 @@ const links = [
   ["/zones", "Zones"],
   ["/virtual-exhibition", "Virtual Expo"],
   ["/floor-plan", "Floor Plan"],
-  ["#partners", "Partners"],
+  ["/partners", "Partners"],
   ["/contact", "Contact"],
 ] as const;
 
-export function Header({ exhibition = false, experience = false, about = false, contact = false, floorPlan = false, zones = false }: { exhibition?: boolean; experience?: boolean; about?: boolean; contact?: boolean; floorPlan?: boolean; zones?: boolean }) {
+export function Header({ exhibition = false, experience = false, about = false, contact = false, floorPlan = false, zones = false, partners = false }: { exhibition?: boolean; experience?: boolean; about?: boolean; contact?: boolean; floorPlan?: boolean; zones?: boolean; partners?: boolean }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#top");
 
@@ -53,9 +53,9 @@ export function Header({ exhibition = false, experience = false, about = false, 
     return links.map(([href, label]) => (
       <a
         key={href}
-        href={(exhibition || about || contact || floorPlan || zones) && href.startsWith("#") ? `/${href}` : href}
-        className={(zones ? href === "/zones" : floorPlan ? href === "/floor-plan" : contact ? href === "/contact" : about ? href === "/about" : exhibition ? href === "/virtual-exhibition" : active === href) ? "active" : undefined}
-        aria-current={zones ? (href === "/zones" ? "page" : undefined) : floorPlan ? (href === "/floor-plan" ? "page" : undefined) : contact ? (href === "/contact" ? "page" : undefined) : about ? (href === "/about" ? "page" : undefined) : exhibition ? (href === "/virtual-exhibition" ? (experience ? "location" : "page") : undefined) : (active === href ? "location" : undefined)}
+        href={(exhibition || about || contact || floorPlan || zones || partners) && href.startsWith("#") ? `/${href}` : href}
+        className={(partners ? href === "/partners" : zones ? href === "/zones" : floorPlan ? href === "/floor-plan" : contact ? href === "/contact" : about ? href === "/about" : exhibition ? href === "/virtual-exhibition" : active === href) ? "active" : undefined}
+        aria-current={partners ? (href === "/partners" ? "page" : undefined) : zones ? (href === "/zones" ? "page" : undefined) : floorPlan ? (href === "/floor-plan" ? "page" : undefined) : contact ? (href === "/contact" ? "page" : undefined) : about ? (href === "/about" ? "page" : undefined) : exhibition ? (href === "/virtual-exhibition" ? (experience ? "location" : "page") : undefined) : (active === href ? "location" : undefined)}
         onClick={() => {
           setActive(href);
           setOpen(false);
