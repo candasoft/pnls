@@ -1,3 +1,5 @@
+import festivalImage from "@/pics/fair4.png";
+
 export function AboutFestival() {
   return (
     <section className="section section-about" id="about">
@@ -12,10 +14,10 @@ export function AboutFestival() {
         <div className="intro-image">
           <img
             loading="lazy"
-            src="/images/festival-hall.webp"
-            alt="Concept illustration of the Pyinyar Lam Sone exhibition hall and education booths"
-            width={1100}
-            height={619}
+            src={festivalImage.src}
+            alt="Festival concept featuring seminars, student activities, networking, sponsor booths, and refreshments"
+            width={festivalImage.width}
+            height={festivalImage.height}
           />
           <div className="intro-accent">
             DISCOVER · CHOOSE · CONNECT

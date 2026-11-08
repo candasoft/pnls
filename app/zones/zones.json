@@ -25,7 +25,7 @@
       "Find Academic Exhibitors",
       "Locate Academic Zone"
     ],
-    "image": "academic-art.webp",
+    "image": "academic.png",
     "tint": "#f2d9bd",
     "kicker": "School & academic pathways"
   },
@@ -55,7 +55,7 @@
       "Explore Universities & Colleges",
       "View Exhibitors"
     ],
-    "image": "higher-education-art.webp",
+    "image": "highedu.png",
     "tint": "#d9e2ef",
     "kicker": "University & college pathways"
   },
@@ -83,7 +83,7 @@
       "Discover Language Schools",
       "Explore Language Programs"
     ],
-    "image": "language-art.webp",
+    "image": "language.png",
     "tint": "#d9e9dd",
     "kicker": "Language & communication"
   },
@@ -115,7 +115,7 @@
       "Explore Skills Training",
       "Meet Training Providers"
     ],
-    "image": "skill-art.webp",
+    "image": "skill.png",
     "tint": "#e6dced",
     "kicker": "Practical & professional learning"
   },
@@ -144,7 +144,7 @@
       "Explore Overseas Opportunities",
       "Connect With Study Advisors"
     ],
-    "image": "overseas-art.webp",
+    "image": "overseas.png",
     "tint": "#d2e8eb",
     "kicker": "International study & guidance"
   },
@@ -169,7 +169,7 @@
       "Discover Education Services",
       "Explore Service Providers"
     ],
-    "image": "services-art.webp",
+    "image": "service.png",
     "tint": "#f0e4be",
     "kicker": "Support for every step"
   }

@@ -125,15 +125,11 @@ body {
   width: 100%;
   height: auto;
 }
+.facts {
+  background: linear-gradient(to bottom, transparent 42px, #fff 42px);
+}
 #about {
-  --section-blend: clamp(48px, 7vw, 100px);
-  background: linear-gradient(
-    to bottom,
-    var(--cream) 0,
-    #fffdf8 var(--section-blend),
-    #fffdf8 calc(100% - var(--section-blend)),
-    var(--cream) 100%
-  );
+  background: #fff;
 }
 #about .intro-grid {
   grid-template-columns: 70% minmax(0, 1fr);

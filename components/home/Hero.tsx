@@ -1,5 +1,6 @@
 import { NoticeButton } from "@/components/notice-provider";
 import { Countdown } from "@/components/countdown";
+import heroImage from "@/pics/fair1crp.png";
 
 export function Hero() {
   return (
@@ -46,10 +47,10 @@ export function Hero() {
         </div>
         <div className="hero-art">
           <img
-            src="/images/festival-hero.webp"
-            alt="Artist's concept of an elegant education and career festival in Myanmar"
-            width={1350}
-            height={760}
+            src={heroImage.src}
+            alt="Education exhibition concept with visitors exploring booths across six education zones"
+            width={heroImage.width}
+            height={heroImage.height}
           />
           <div className="hero-side">
             <svg

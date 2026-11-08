@@ -1,3 +1,5 @@
+import virtualExhibitionImage from "@/pics/virtualexhibit.png";
+
 export function VirtualExhibition() {
   return (
     <section className="section showcase" id="virtual">
@@ -26,10 +28,10 @@ export function VirtualExhibition() {
         </div>
         <img
           loading="lazy"
-          src="/images/virtual-education-fair-workspace.webp"
-          alt="Illustration of a student exploring virtual education booths, digital brochures and an online consultation from her laptop"
-          width={1536}
-          height={1024}
+          src={virtualExhibitionImage.src}
+          alt="Virtual exhibition concept with students exploring online booths, live sessions, exhibitor chats, brochures, and appointments across devices"
+          width={virtualExhibitionImage.width}
+          height={virtualExhibitionImage.height}
         />
       </div>
     </section>

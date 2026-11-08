@@ -77,6 +77,20 @@
   height: 130px;
   object-fit: contain;
 }
+.zone-gallery-card-image .zone-gallery-copy h3 {
+  font-size: 1.9rem;
+}
+.zone-gallery-card-image .zone-gallery-art {
+  padding: 12px 0 0;
+  align-content: end;
+}
+.zone-gallery-card-image .zone-gallery-art img {
+  width: 100%;
+  height: auto;
+}
+.zone-gallery-card-image .zone-gallery-footer {
+  padding-top: 16px;
+}
 .zone-gallery-footer {
   display: flex;
   align-items: center;

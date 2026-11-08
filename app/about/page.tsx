@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import festival from "@/pics/festival2.png";
+import festival from "@/pics/cover.jpg";
 import organizerLogo from "@/pics/organizer.png";
 import styles from "./about.module.css";
 import { AboutIcon, type AboutIconName } from "@/components/about-icon";
@@ -55,8 +55,8 @@ export default function AboutPage() {
               </div>
             </div>
             <figure className={styles.heroImage}>
-              <Image src={festival} alt="Festival concept illustration of students and educators meeting beside a golden, book-inspired exhibition building overlooking Yangon at sunset" sizes="(max-width: 1238px) 100vw, 1190px" loading="eager" placeholder="blur" />
-              <figcaption>Discover. Connect. Choose. <span>Festival concept illustration</span></figcaption>
+              <Image src={festival} alt="Pyinyar Lam Sone Education and Career Pathways Festival 2027 cover featuring learners and professionals, held 30–31 January at Myanmar Expo Hall, Fortune Plaza" sizes="(max-width: 1238px) 100vw, 1190px" loading="eager" placeholder="blur" />
+              <figcaption>Discover. Connect. Choose. <span>Festival cover</span></figcaption>
             </figure>
             <div className={styles.imageRibbon} aria-hidden="true"><span>Education</span><i>✦</i><span>Careers</span><i>✦</i><span>Connections</span><i>✦</i><span>Possibilities</span></div>
           </div>

@@ -1,14 +1,14 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 const zones = [
-  { title: "Academic Zone", description: "Preschools, primary and secondary schools, GED, IGCSE and A-Level programs.", image: "academic-art.webp", tint: "#f2d9bd", link: "Explore Academic Pathways" },
-  { title: "Higher Education Zone", description: "Explore colleges, local private universities, business schools and degree pathways.", image: "higher-education-art.webp", tint: "#d9e2ef", link: "Explore Higher Education" },
-  { title: "Language Zone", description: "English, IELTS preparation and other foreign language programs for every ambition.", image: "language-art.webp", tint: "#d9e9dd", link: "Explore Language Programs" },
-  { title: "Skill Zone", description: "Vocational training, professional skills, engineering, arts and career development.", image: "skill-art.webp", tint: "#e6dced", link: "Explore Skills Training" },
-  { title: "Overseas Education Zone", description: "Study abroad advisors, international universities, application guidance and scholarships.", image: "overseas-art.webp", tint: "#d2e8eb", link: "Explore Global Opportunities" },
-  { title: "Education Services Zone", description: "Technology, education finance, insurance, books and travel support services.", image: "services-art.webp", tint: "#f0e4be", link: "Explore Education Services" },
+  { title: "Academic Zone", description: "Preschools, primary and secondary schools, GED, IGCSE and A-Level programs.", image: "academic.png", tint: "#f2d9bd", link: "Explore Academic Pathways" },
+  { title: "Higher Education Zone", description: "Explore colleges, local private universities, business schools and degree pathways.", image: "highedu.png", tint: "#d9e2ef", link: "Explore Higher Education" },
+  { title: "Language Zone", description: "English, IELTS preparation and other foreign language programs for every ambition.", image: "language.png", tint: "#d9e9dd", link: "Explore Language Programs" },
+  { title: "Skill Zone", description: "Vocational training, professional skills, engineering, arts and career development.", image: "skill.png", tint: "#e6dced", link: "Explore Skills Training" },
+  { title: "Overseas Education Zone", description: "Study abroad advisors, international universities, application guidance and scholarships.", image: "overseas.png", tint: "#d2e8eb", link: "Explore Global Opportunities" },
+  { title: "Education Services Zone", description: "Technology, education finance, insurance, books and travel support services.", image: "service.png", tint: "#f0e4be", link: "Explore Education Services" },
 ];
 
 export function EducationZones() {
@@ -46,7 +46,7 @@ export function EducationZones() {
         <div className="zone-gallery-stage">
           <div className="zone-gallery" id="zone-gallery" ref={gallery} role="region" aria-label="Six education zones" tabIndex={0}>
           {zones.map((zone, index) => (
-            <article className="zone-gallery-card" key={zone.title} style={{ "--zone-tint": zone.tint } as CSSProperties}>
+            <article className="zone-gallery-card zone-gallery-card-image" key={zone.title} style={{ "--zone-tint": zone.tint } as CSSProperties}>
               <div className="zone-gallery-copy">
                 <span className="zone-gallery-kicker">Find your pathway</span>
                 <h3>{zone.title}</h3>
