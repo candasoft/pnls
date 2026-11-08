@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { floorBooths, floorZones, type FloorBooth } from "./floor-data";
 import { VisualBooth } from "./visual-booth";
+import { MainStage } from "./main-stage";
+import { ExperienceAnalytics, trackExperience } from "./experience-analytics";
 
 
 const favoriteKey = "pls2027:experience-favorites";
@@ -58,6 +60,7 @@ export function BoothExperience() {
 
   return <div className="container vx-experience">
     <div className="vx-notice"><span aria-hidden="true">ⓘ</span><p><strong>Interactive preview.</strong> The arrangement follows the supplied booth plan. School names and profiles are demo content; final assignments, contact details, videos and brochures are awaiting exhibitors.</p><span className="vx-chip">DEMO</span></div>
+    <ExperienceAnalytics />
     <div className="vx-toolbar">
       <label className="vx-search"><span aria-hidden="true">⌕</span><input type="search" aria-label="Find a school or booth" placeholder="Find a school, booth number or course…" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
       <label className="vx-zone-select"><span className="vx-sr-only">Education zone</span><select value={zone} onChange={(event) => setZone(event.target.value)}><option value="all">All zones &amp; partners</option>{floorZones.map((item) => <option key={item.code} value={item.color}>{item.name}</option>)}<option value="partner">VIP &amp; zone partners</option></select></label>
@@ -76,9 +79,9 @@ export function BoothExperience() {
         <div className="vx-map-scroll" tabIndex={0} aria-label="Scrollable floor plan. Scroll horizontally and vertically to explore all booths.">
           <div className="vx-floor" style={{ width: `${zoom * 9}px`, height: `${zoom * 14.22}px` }}>
             <div className="vx-floor-inner" style={{ transform: `scale(${zoom * 0.009})` }}>
-              <div className="vx-stage">MAIN STAGE<span>Education &amp; career talks</span></div><div className="vx-seating">SEATING AREA<span aria-hidden="true">▤ &nbsp; ▤ &nbsp; ▤ &nbsp; ▤ &nbsp; ▤ &nbsp; ▤</span></div>
+              <MainStage /><div className="vx-seating">SEATING AREA<span aria-hidden="true">▤ &nbsp; ▤ &nbsp; ▤ &nbsp; ▤ &nbsp; ▤ &nbsp; ▤</span></div>
               <div className="vx-zone-label vx-ab-label">ACADEMIC &amp; HIGHER EDUCATION</div><div className="vx-zone-label vx-skill-label">SKILL ZONE</div><div className="vx-zone-label vx-language-label">LANGUAGE ZONE</div><div className="vx-zone-label vx-overseas-label">OVERSEAS</div>
-              {floorBooths.map((booth) => <button key={booth.id} type="button" className={`vx-booth ${booth.color}${booth.logo ? " vx-branded-booth" : ""}${filtering && !matches(booth) ? " vx-dimmed" : ""}${favorites.includes(booth.id) ? " vx-is-favorite" : ""}`} style={{ left: booth.x, top: booth.y, width: booth.width ?? 96, height: booth.height ?? 43 }} title={`${booth.name} · ${booth.id} · ${booth.zone}`} aria-label={`${booth.name}, booth ${booth.id}, ${booth.zone}${favorites.includes(booth.id) ? ", saved to favorites" : ""}`} onClick={(event) => { opener.current = event.currentTarget; setSelected(booth); }}>{booth.logo && <img src={booth.logo} alt="" width={132} height={91} />}<span>{booth.name}</span></button>)}
+              {floorBooths.map((booth) => <button key={booth.id} type="button" className={`vx-booth ${booth.color}${booth.logo ? " vx-branded-booth" : ""}${filtering && !matches(booth) ? " vx-dimmed" : ""}${favorites.includes(booth.id) ? " vx-is-favorite" : ""}`} style={{ left: booth.x, top: booth.y, width: booth.width ?? 96, height: booth.height ?? 43 }} title={`${booth.name} · ${booth.id} · ${booth.zone}`} aria-label={`${booth.name}, booth ${booth.id}, ${booth.zone}${favorites.includes(booth.id) ? ", saved to favorites" : ""}`} onClick={(event) => { opener.current = event.currentTarget; trackExperience({ type: "booth", boothId: booth.id }); setSelected(booth); }}>{booth.logo && <img src={booth.logo} alt="" width={132} height={91} />}<span>{booth.name}</span></button>)}
               <div className="vx-food">FOOD COURT<span>Take a little break</span></div><div className="vx-entry">↑ ENTRANCE</div><div className="vx-exit">EXIT ↓</div><div className="vx-aisle">EXPLORE AT YOUR OWN PACE</div>
             </div>
           </div>

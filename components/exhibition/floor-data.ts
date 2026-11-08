@@ -16,6 +16,11 @@ export type FloorBooth = {
   address?: string;
   email?: string;
   phone?: string;
+  chatLinks?: {
+    telegram?: string;
+    viber?: string;
+    messenger?: string;
+  };
   website?: string;
   videoUrl?: string;
   brochureUrl?: string;
@@ -62,7 +67,7 @@ const partnerAreas = [
   { id: "VIP-02", name: "Evergreen University", x: 22, y: 26, width: 170, height: 135 },
   { id: "VIP-01", name: "Horizon International School", x: 797, y: 26, width: 181, height: 170 },
   { id: "VIP-03", name: "Summit International College", x: 478, y: 225, width: 200, height: 138 },
-  { id: "PARTNER-C", name: "Pyinyar Lam Sone", logo: "/images/festival-logo.png", x: 218, y: 225, width: 200, height: 138 },
+  { id: "PARTNER-C", name: "Pyinyar Lam Sone", logo: "/images/festival-logo.png", chatLinks: { viber: "viber://chat?number=%2B959952239984" }, x: 218, y: 225, width: 200, height: 138 },
   { id: "PARTNER-D", name: "Pioneer Technical Institute", x: 732, y: 225, width: 134, height: 138 },
   { id: "PARTNER-A", name: "Bright Future School", x: 22, y: 1390, width: 170, height: 150 },
   { id: "PARTNER-B", name: "Aspire Business College", x: 218, y: 1390, width: 200, height: 150 },

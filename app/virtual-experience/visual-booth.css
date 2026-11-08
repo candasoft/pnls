@@ -56,7 +56,12 @@
 .vb-profile-sign { position: absolute; top: 66%; left: 8%; width: 15%; padding: 1.6cqw 1cqw .8cqw; background: linear-gradient(140deg, #182c42, #0a1728); border: 1px solid #d7b66c90; color: #f1dfb8; box-shadow: .7cqw .8cqw 1.5cqw #0005; transform: perspective(800px) rotateY(8deg); text-align: center; }
 .vb-sign-mark { display: grid; place-items: center; width: 3.7cqw; height: 3.7cqw; border: 1px solid #d6b778; border-radius: 50%; color: #e6c683; font: 500 1.25cqw "Outfit", sans-serif; margin: 0 auto 1cqw; }
 .vb-profile-sign > span:nth-child(2) { display: block; font: 500 1.3cqw/1.3 "Outfit", sans-serif; letter-spacing: .08em; }
-.vb-profile-sign small { display: block; font-size: .75cqw; color: #d1b67f; border-top: 1px solid #d7b66c40; margin-top: 1.2cqw; padding-top: .65cqw; }
+.vb-profile-sign small { display: block; font-size: clamp(12px, 1.25cqw, 16px); font-weight: 700; line-height: 1.35; color: #f3d89d; border-top: 1px solid #d7b66c60; margin-top: 1.2cqw; padding-top: .8cqw; }
+.vb-desk-phone { position: absolute; left: 84%; top: 48%; width: 5.8%; z-index: 3; text-align: center; transform: rotate(-7deg); }
+.vb-desk-phone svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 .3cqw .3cqw #0007); transition: transform .2s; }
+.vb-desk-phone:hover svg { transform: translateY(-.4cqw); }
+.vb-desk-phone > span { display: block; width: max-content; position: relative; left: 50%; transform: translateX(-50%); color: #f4dcaa; background: #091726e8; border: 1px solid #d1ad67; border-radius: .3cqw; padding: .4cqw .6cqw; font-size: clamp(10px, .85cqw, 13px); white-space: nowrap; box-shadow: 0 2px 7px #0005; }
+.vb-desk-phone b { margin-left: .3cqw; }
 .vb-document { position: absolute; top: 53.5%; width: 9%; height: 11.5%; color: #17273e; text-align: left; text-decoration: none; z-index: 2; }
 .vb-document-main { left: 43%; transform: perspective(700px) rotateX(55deg) rotateZ(-13deg); }
 .vb-document-admissions { left: 55%; top: 53.5%; transform: perspective(700px) rotateX(55deg) rotateZ(10deg); }
@@ -89,6 +94,18 @@
 .vb-info-header h3 { font-size: 1.5rem; line-height: 1.2; margin: 8px 0 0; }
 .vb-info-header > button { flex-shrink: 0; width: 29px; height: 29px; border: 1px solid #dac8a8; border-radius: 50%; font-size: 1.35rem; background: #f6efdf; color: #775f34; line-height: 1; }
 .vb-about > p, .vb-contact > p { font-size: .8rem; line-height: 1.8; color: #6c788b; }
+.vb-school-demo { display: inline-block; padding: 4px 7px; border: 1px solid #d7bd8c; border-radius: 4px; color: #96733a; font-size: .58rem; letter-spacing: .09em; margin-bottom: 12px; }
+.vb-school-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; background: #f5eedf; border-radius: 7px; padding: 14px 10px; margin: 18px 0; text-align: center; }
+.vb-school-stats strong { display: block; color: #9c793f; font: 600 1.35rem "Outfit", sans-serif; }
+.vb-school-stats span { display: block; color: #7c8491; font-size: .61rem; margin-top: 4px; }
+.vb-about > h4 { font: 600 .96rem "Outfit", sans-serif; margin: 24px 0 12px; color: #1b2d44; }
+.vb-school-courses { display: grid; gap: 9px; }
+.vb-school-courses article { padding: 12px; border: 1px solid #e8deca; border-left: 3px solid #c1a064; border-radius: 5px; background: #fff; }
+.vb-school-courses h5 { margin: 0; font-size: .78rem; color: #2d4059; }
+.vb-school-courses p { font-size: .66rem; color: #84909f; line-height: 1.7; margin: 6px 0 0; }
+.vb-school-offer { padding: 14px; border: 1px solid #d9c59d; border-radius: 6px; background: #f6efdf; }
+.vb-school-offer strong { color: #876832; font-size: .77rem; }
+.vb-school-offer p { color: #8b7b62; font-size: .72rem; line-height: 1.75; margin: 7px 0 0; }
 .vb-programs { display: flex; flex-wrap: wrap; gap: 6px; }
 .vb-programs > span { padding: 5px 8px; border: 1px solid #e4d9c4; border-radius: 4px; font-size: .66rem; color: #7c6540; background: #f5eddf; }
 .vb-about dl { margin: 22px 0; display: grid; gap: 15px; grid-template-columns: 1fr 1fr; }
@@ -101,6 +118,21 @@
 .vb-information .btn { font-size: .74rem; padding: 11px 16px; justify-self: start; }
 .vb-about .vb-info-note, .vb-contact .vb-info-note { font-size: .65rem; color: #8b795d; padding: 11px; background: #f6efdf; border-radius: 4px; margin-top: 18px; }
 .vb-contact-links { display: grid; gap: 8px; font-size: .75rem; text-decoration: underline; color: #927135; }
+.vb-messaging > h4 { margin: 0 0 7px; font: 600 1rem "Outfit", sans-serif; color: #1b2d44; }
+.vb-messaging > p { font-size: .73rem; color: #7c8898; margin: 0 0 15px; line-height: 1.7; }
+.vb-messaging-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.vb-channel { min-width: 0; display: flex; align-items: center; flex-direction: column; gap: 8px; border: 1px solid #e5dccb; border-radius: 9px; padding: 15px 5px 12px; background: white; color: #24384f; text-align: center; transition: border-color .2s, box-shadow .2s; }
+.vb-channel:hover { border-color: #c2a165; box-shadow: 0 4px 12px #07163809; }
+.vb-channel-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; color: white; box-shadow: 0 3px 7px #07163815; }
+.vb-channel-icon svg { width: 32px; height: 32px; }
+.vb-channel-telegram { background: linear-gradient(140deg, #37b9ed, #1689cf); }
+.vb-channel-viber { background: linear-gradient(140deg, #9980d9, #7352b5); }
+.vb-channel-messenger { background: linear-gradient(140deg, #6789f2, #4270ea); }
+.vb-channel strong { font-size: .7rem; font-weight: 600; }
+.vb-channel small { color: #929baa; font-size: .57rem; }
+.vb-messaging .vb-messaging-notice { background: #f6efdf; color: #8c7249; padding: 10px; margin: 12px 0 0; border-radius: 5px; font-size: .67rem; }
+.vb-email-divider { display: flex; align-items: center; gap: 10px; color: #9b927e; font-size: .61rem; margin: 20px 0; }
+.vb-email-divider::before, .vb-email-divider::after { content: ""; flex: 1; height: 1px; background: #e8dfcf; }
 .vb-experience :focus-visible { outline: 3px solid #e9c37a; outline-offset: 4px; }
 .vb-information :focus-visible { outline-color: #9e7835; }
 @media (max-width: 700px) {

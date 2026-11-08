@@ -1,0 +1,38 @@
+.vx-stage { border: 1px solid #d7b56d50; cursor: pointer; transition: box-shadow .2s, background .2s; }
+.vx-stage:hover { background: #1b355d; box-shadow: 0 0 0 3px #d1ad6760, 0 5px 15px #07163820; }
+.vx-stage:focus-visible { outline: 3px solid #b68c43; outline-offset: 4px; }
+.vx-stage-play { position: absolute; right: 10px; top: 10px; width: 22px; height: 22px; color: #e7c787; }
+.vx-stage-dialog { width: min(960px, calc(100% - 28px)); max-height: 92dvh; padding: 0; overflow: auto; border: 1px solid #d6b16b60; border-radius: 13px; background: #0a192c; color: #f4eddf; box-shadow: 0 20px 100px #0006; }
+.vx-stage-dialog::backdrop { background: #071638b8; backdrop-filter: blur(5px); }
+.vx-stage-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 25px 28px; border-bottom: 1px solid #e6c17b26; }
+.vx-stage-header > div > span { color: #c9a972; font-size: .56rem; letter-spacing: .15em; }
+.vx-stage-header h2 { font-size: 1.9rem; margin: 10px 0 8px; }
+.vx-stage-header p { color: #9eafc5; font-size: .78rem; margin: 0; }
+.vx-stage-header > button { width: 35px; height: 35px; flex-shrink: 0; border: 1px solid #d4b47660; border-radius: 50%; color: #ecd09b; background: #ffffff06; font-size: 1.65rem; line-height: 1; }
+.vx-stage-player { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #030914; }
+.vx-stage-player > iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vx-stage-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding: 30px; background: radial-gradient(ellipse at 50% 20%, #233b58, #081321 75%); text-align: center; }
+.vx-stage-placeholder > svg { width: 80px; height: 80px; color: #d9b36d; margin-bottom: 5px; }
+.vx-stage-announcement { color: #b89a62; font-size: .57rem; letter-spacing: .16em; }
+.vx-stage-placeholder h3 { font: 500 clamp(1.3rem, 3vw, 2rem) "Outfit", sans-serif; margin: 0; color: #f5dfb8; }
+.vx-stage-placeholder p { color: #a3b3c9; font-size: .83rem; max-width: 400px; line-height: 1.8; margin: 0; }
+.vx-stage-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 28px; border-top: 1px solid #e6c17b26; }
+.vx-stage-footer strong, .vx-stage-footer div > span { display: block; }
+.vx-stage-footer strong { font-size: .82rem; font-weight: 500; color: #efdab5; }
+.vx-stage-footer div > span { font-size: .68rem; margin-top: 4px; color: #a3b1c4; }
+.vx-stage-footer > span { font-size: .68rem; color: #9babc1; }
+.vx-stage-footer > a { font-size: .78rem; color: #ecc880; border: 1px solid #d2af6b70; border-radius: 5px; padding: 10px 14px; }
+.vx-stage-playback-note { color: #94a5bd; font-size: .68rem; padding: 0 28px 18px; margin: 0; }
+.vx-stage-dialog :focus-visible { outline: 3px solid #e3bd74; outline-offset: 4px; }
+@media (max-width: 600px) {
+  .vx-stage-header { padding: 20px 17px; }
+  .vx-stage-header > div > span { font-size: .48rem; }
+  .vx-stage-header h2 { font-size: 1.45rem; }
+  .vx-stage-placeholder { padding: 20px; gap: 10px; }
+  .vx-stage-player:has(.vx-stage-placeholder) { min-height: 290px; }
+  .vx-stage-placeholder > svg { width: 55px; height: 55px; }
+  .vx-stage-placeholder p { font-size: .74rem; }
+  .vx-stage-footer { align-items: flex-start; padding: 17px; gap: 15px; flex-wrap: wrap; }
+  .vx-stage-footer > span { font-size: .6rem; }
+}
+@media (prefers-reduced-motion: reduce) { .vx-stage { transition: none; } }
