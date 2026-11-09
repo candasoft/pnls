@@ -11,9 +11,7 @@ export const metadata: Metadata = {
 
 const contacts = [
   ["Min Htun Oo", "09 961172232", "+959961172232"],
-  ["Chaw Su", "09 5013646", "+9595013646"],
   ["Khant Soe Htet", "09 250000110", "+959250000110"],
-  ["Chaw Kalyar", "09 257239752", "+959257239752"],
 ];
 
 export default function ContactPage() {
