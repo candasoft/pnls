@@ -55,6 +55,6 @@ export function PartnershipForm() {
     <p className={styles.formNote}>Your contact details and enquiry will be shared with the organizing team to respond to your request.</p>
     <button className="btn btn-navy" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Request Partnership Proposal"} ↗</button>
     <div role="status">{status === "success" && <p className={styles.success}>Thank you for your interest in partnering with Pyinyar Lam Sone 2027. Our partnership team will review your enquiry and contact you.</p>}</div>
-    {status === "error" && <p className={styles.error} role="alert">Your enquiry could not be delivered. Please try again or email <a href="mailto:meseventservices@gmail.com">meseventservices@gmail.com</a>.</p>}
+    {status === "error" && <p className={styles.error} role="alert">Your enquiry could not be delivered. Please try again or <a href="/contact">contact the organizing team</a>.</p>}
   </form>;
 }

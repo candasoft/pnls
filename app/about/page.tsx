@@ -115,7 +115,7 @@ export default function AboutPage() {
             <div>
               <p className={styles.organizerName}>Organized by <strong>MES – Marketing • Events • Solutions</strong></p>
               <p>MES is the organizer of Pyinyar Lam Sone 2027, bringing together participating education institutions, partners, sponsors, and supporting organizations to deliver a connected education and career discovery experience.</p>
-              <div className={styles.actions}><a className="btn btn-gold" href="mailto:meseventservices@gmail.com">Contact the Organizing Team <span aria-hidden="true">↗</span></a></div>
+              <div className={styles.actions}><a className="btn btn-gold" href="/contact">Contact the Organizing Team <span aria-hidden="true">↗</span></a></div>
             </div>
           </div>
         </section>

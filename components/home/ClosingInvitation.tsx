@@ -21,7 +21,7 @@ export function ClosingInvitation() {
         </NoticeButton>
         <a
           className="btn btn-light"
-          href="mailto:meseventservices@gmail.com?subject=Pyinyar%20Lam%20Sone%202027%20Exhibitor%20Enquiry"
+          href="/contact"
         >
           Become an Exhibitor →
         </a>

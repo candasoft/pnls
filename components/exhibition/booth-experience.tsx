@@ -89,7 +89,7 @@ export function BoothExperience() {
         <div className="vx-map-bottom"><span>↔ Scroll to explore · Use + / − to zoom</span><span>Layout reference · Not to scale</span></div>
       </section>
     </div>
-    <div className="vx-bottom-invitation"><span aria-hidden="true">✦</span><p>Your next chapter could start with one conversation.</p><a href="mailto:meseventservices@gmail.com?subject=Virtual%20experience%20enquiry">Contact the organizers ↗</a></div>
+    <div className="vx-bottom-invitation"><span aria-hidden="true">✦</span><p>Your next chapter could start with one conversation.</p><a href="/contact">Contact the organizers ↗</a></div>
     <dialog className="vx-dialog vx-visual-dialog" ref={dialog} aria-labelledby="vx-booth-title" onClose={() => { setSelected(null); opener.current?.focus(); }} onClick={(event) => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
       {selected && <VisualBooth key={selected.id} booth={selected} favorite={favorites.includes(selected.id)} onFavorite={() => toggleFavorite(selected.id)} onClose={() => dialog.current?.close()} />}
     </dialog>

@@ -41,7 +41,7 @@ export default function VirtualExhibitionPage() {
         <div><span className="eyebrow">MAKE IT YOUR OWN</span><h2 id="expo-how-heading">A little exploring.<br />A world of opportunity.</h2><p>Take your time. Your next step starts with the right information.</p></div>
         <ol><li><span>01</span><div><h3>Find your direction</h3><p>Browse six zones or narrow your search by destination, program and subject.</p></div></li><li><span>02</span><div><h3>Get to know a booth</h3><p>Explore pathways and resources. Save favorites to revisit on this browser.</p></div></li><li><span>03</span><div><h3>Start a conversation</h3><p>Prepare your questions and contact the organizing team about participation.</p></div></li></ol>
       </section>
-      <section className="expo-invitation"><div className="container"><div><span className="eyebrow">FOR INSTITUTIONS &amp; EDUCATION PROVIDERS</span><h2>Be part of someone’s next chapter.</h2><p>Bring your institution to the Pyinyar Lam Sone virtual exhibition.</p></div><a className="btn btn-gold" href="mailto:meseventservices@gmail.com?subject=Virtual%20exhibition%20participation">Enquire about exhibiting ↗</a></div></section>
+      <section className="expo-invitation"><div className="container"><div><span className="eyebrow">FOR INSTITUTIONS &amp; EDUCATION PROVIDERS</span><h2>Be part of someone’s next chapter.</h2><p>Bring your institution to the Pyinyar Lam Sone virtual exhibition.</p></div><a className="btn btn-gold" href="/contact">Enquire about exhibiting ↗</a></div></section>
     </main>
     <Footer />
   </>;

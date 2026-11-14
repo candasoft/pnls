@@ -19,6 +19,10 @@ npm run build
 npm start
 ```
 
+## Social sharing preview
+
+The default Open Graph and Twitter/X preview uses `pics/Myanmar Education & Career Pathways Festival.png`, copied unchanged to `app/opengraph-image.png` and `app/twitter-image.png`. It is inherited by all pages. Set `SITE_URL` to the public website origin (including `https://`) in the deployment environment before building so image links use the public domain. Vercel can detect its production domain automatically. Rebuild after changing the domain or preview artwork.
+
 ## Structure
 
 - `app/page.tsx`: home page composition.

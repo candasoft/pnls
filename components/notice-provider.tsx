@@ -66,7 +66,7 @@ export function NoticeProvider({ children }: { children: ReactNode }) {
         <span className="eyebrow">Pyinyar Lam Sone 2027</span>
         <h2 id="notice-title">{notice?.title}</h2>
         <p id="notice-description">{notice?.message}</p>
-        <a href="mailto:meseventservices@gmail.com" className="btn btn-navy">
+        <a href="/contact" className="btn btn-navy">
           Contact Organizers →
         </a>
       </dialog>

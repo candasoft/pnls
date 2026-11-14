@@ -54,7 +54,7 @@
               <br />
               9:00 AM – 5:00 PM
             </p>
-            <a href="mailto:meseventservices@gmail.com">
+            <a href="/contact">
               meseventservices@gmail.com
             </a>
             <p>
