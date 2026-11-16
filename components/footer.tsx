@@ -39,6 +39,7 @@
               <a href="/virtual-experience">Virtual Experience</a>
               <a href="/floor-plan">Floor Plan</a>
               <a href="/partners">Our Partners</a>
+              <a href="/blog">Festival Blog</a>
               <a href="/contact">Contact Us</a>
             </div>
           </div>

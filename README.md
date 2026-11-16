@@ -19,6 +19,17 @@ npm run build
 npm start
 ```
 
+## Blog
+
+`/blog` lists the five posts from `docs/Blogs`, with full articles at `/blog/[slug]`.
+The original Myanmar text and paragraph line breaks are preserved. The introduction
+uses its embedded artwork; other posts use existing festival illustrations.
+
+After adding or editing Word documents in `docs/Blogs`, run `npm run blog:sync`
+(Python 3.9+ required), then rebuild. Commit the generated `app/blog/posts.json`
+and `public/images/blog/` artwork with the sources. The website itself requires
+only Node.js; it does not read Word files or require Python in production.
+
 ## Social sharing preview
 
 The default Open Graph and Twitter/X preview uses `pics/Myanmar Education & Career Pathways Festival.png`, copied unchanged to `app/opengraph-image.png` and `app/twitter-image.png`. It is inherited by all pages. Set `SITE_URL` to the public website origin (including `https://`) in the deployment environment before building so image links use the public domain. Vercel can detect its production domain automatically. Rebuild after changing the domain or preview artwork.

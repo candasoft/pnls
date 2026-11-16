@@ -6,7 +6,7 @@ import { AboutFestival } from "@/components/home/AboutFestival";
 import { EducationZones } from "@/components/home/EducationZones";
 import { FestivalAttractions } from "@/components/home/FestivalAttractions";
 import { VirtualExhibition } from "@/components/home/VirtualExhibition";
-import { ExhibitorIntroduction } from "@/components/home/ExhibitorIntroduction";
+import { BlogPreview } from "@/components/home/BlogPreview";
 import { StageProgram } from "@/components/home/StageProgram";
 import { VisitorGuide } from "@/components/home/VisitorGuide";
 import { FestivalPartners } from "@/components/home/FestivalPartners";
@@ -26,11 +26,11 @@ export default function HomePage() {
         <VirtualExhibition />
         <EducationZones />
         <FestivalAttractions />
-        <ExhibitorIntroduction />
         <StageProgram />
         <VisitorGuide />
         <FestivalPartners />
         <ClosingInvitation />
+        <BlogPreview />
       </main>
       <Footer />
     </>
